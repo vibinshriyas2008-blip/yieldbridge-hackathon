@@ -1,17 +1,19 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, use } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { ArrowLeft, User, MapPin, CheckCircle2, ShieldCheck } from 'lucide-react';
 import { MOCK_LISTINGS, MOCK_FARMERS } from '@/lib/mockData';
 
-export default function SubmitQuotePage({ params }: { params: { id: string } }) {
+export default function SubmitQuotePage({ params }: { params: Promise<{ id: string }> }) {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const listingId = params.id;
+  const resolvedParams = use(params);
+  const listingId = resolvedParams.id;
+  
   const listing = MOCK_LISTINGS.find(l => l.id === listingId);
   const farmer = MOCK_FARMERS.find(f => f?.id === listing?.farmerId);
 

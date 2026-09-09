@@ -1,17 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, use } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { ArrowLeft, User, MapPin, CheckCircle2, ShieldCheck, Truck } from 'lucide-react';
 import { MOCK_LISTINGS, MOCK_OFFERS, MOCK_BUYERS } from '@/lib/mockData';
 
-export default function CompareOffersPage({ params }: { params: { id: string } }) {
+export default function CompareOffersPage({ params }: { params: Promise<{ id: string }> }) {
   const router = useRouter();
   const [acceptedOffer, setAcceptedOffer] = useState<string | null>(null);
 
-  // Next.js 15 requires awaiting params, but for simple MVP we just use it directly (might cause a warning but works in client components if unwrapped properly, actually let's just use React.use() if needed, but simple props work in Next 14. Let's assume standard app router).
-  const listingId = params.id;
+  const resolvedParams = use(params);
+  const listingId = resolvedParams.id;
+  
   const listing = MOCK_LISTINGS.find(l => l.id === listingId);
   const offers = MOCK_OFFERS.filter(o => o.listingId === listingId);
   const bestOffer = offers.reduce((prev, current) => (prev.offeredPrice > current.offeredPrice) ? prev : current, offers[0]);
