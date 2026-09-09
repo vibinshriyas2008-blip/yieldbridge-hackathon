@@ -20,9 +20,9 @@ export default function Home() {
             <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4 text-green-600 group-hover:bg-green-600 group-hover:text-white transition-colors">
               <Leaf className="w-6 h-6" />
             </div>
-            <h2 className="text-2xl font-semibold mb-2">Farmer Portal</h2>
-            <p className="text-gray-600 mb-4">List produce, receive quotes, and choose the best offer.</p>
-            <div className="flex items-center text-green-600 font-medium">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Farmer Portal</h2>
+            <p className="text-gray-700 mb-4 font-medium">List produce, receive quotes, and choose the best offer.</p>
+            <div className="flex items-center text-green-700 font-bold">
               Enter Dashboard <ArrowRight className="w-4 h-4 ml-1" />
             </div>
           </Link>
@@ -31,9 +31,9 @@ export default function Home() {
             <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
               <Users className="w-6 h-6" />
             </div>
-            <h2 className="text-2xl font-semibold mb-2">Buyer Portal</h2>
-            <p className="text-gray-600 mb-4">Browse verified produce, submit quotations, and secure supply.</p>
-            <div className="flex items-center text-blue-600 font-medium">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Buyer Portal</h2>
+            <p className="text-gray-700 mb-4 font-medium">Browse verified produce, submit quotations, and secure supply.</p>
+            <div className="flex items-center text-blue-700 font-bold">
               Enter Dashboard <ArrowRight className="w-4 h-4 ml-1" />
             </div>
           </Link>
@@ -42,9 +42,9 @@ export default function Home() {
             <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4 text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors">
               <Phone className="w-6 h-6" />
             </div>
-            <h2 className="text-2xl font-semibold mb-2">Assisted Access</h2>
-            <p className="text-gray-600 mb-4">Voice/IVR and Service Center simulation for digital inclusion.</p>
-            <div className="flex items-center text-orange-600 font-medium">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Assisted Access</h2>
+            <p className="text-gray-700 mb-4 font-medium">Voice/IVR and Service Center simulation for digital inclusion.</p>
+            <div className="flex items-center text-orange-700 font-bold">
               Start Simulation <ArrowRight className="w-4 h-4 ml-1" />
             </div>
           </Link>
@@ -53,9 +53,9 @@ export default function Home() {
             <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors">
               <BarChart3 className="w-6 h-6" />
             </div>
-            <h2 className="text-2xl font-semibold mb-2">Impact & Transparency</h2>
-            <p className="text-gray-600 mb-4">View price transparency breakdown and platform impact metrics.</p>
-            <div className="flex items-center text-purple-600 font-medium">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Impact & Transparency</h2>
+            <p className="text-gray-700 mb-4 font-medium">View price transparency breakdown and platform impact metrics.</p>
+            <div className="flex items-center text-purple-700 font-bold">
               View Analytics <ArrowRight className="w-4 h-4 ml-1" />
             </div>
           </Link>
