@@ -110,7 +110,7 @@ export default function AssistedAccessSimulation() {
                 <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Phone className="w-12 h-12 text-gray-700" />
                 </div>
-                <h2 className="text-2xl font-bold mb-2">Basic Phone IVR</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">Basic Phone IVR</h2>
                 <p className="text-gray-800 mb-8 max-w-lg mx-auto">For completely offline farmers using basic feature phones. Dial a toll-free number to interact with the marketplace.</p>
 
                 <div className="max-w-sm mx-auto bg-gray-100 border-4 border-gray-800 rounded-3xl p-6 shadow-xl relative overflow-hidden">
@@ -144,7 +144,7 @@ export default function AssistedAccessSimulation() {
                 <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <MonitorSmartphone className="w-12 h-12 text-blue-600" />
                 </div>
-                <h2 className="text-2xl font-bold mb-2">Assisted Service Centers</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">Assisted Service Centers</h2>
                 <p className="text-gray-800 mb-8 max-w-lg mx-auto">Authorized local operators help farmers without devices to list their produce securely.</p>
 
                 <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 max-w-2xl mx-auto text-left">
