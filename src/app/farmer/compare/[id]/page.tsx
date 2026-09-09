@@ -3,7 +3,7 @@
 import { useState, use } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { ArrowLeft, User, MapPin, CheckCircle2, ShieldCheck, Truck } from 'lucide-react';
+import { ArrowLeft, MapPin, CheckCircle2, ShieldCheck, Truck } from 'lucide-react';
 import { MOCK_LISTINGS, MOCK_OFFERS, MOCK_BUYERS } from '@/lib/mockData';
 
 export default function CompareOffersPage({ params }: { params: Promise<{ id: string }> }) {
@@ -22,7 +22,6 @@ export default function CompareOffersPage({ params }: { params: Promise<{ id: st
   const handleAccept = (offerId: string) => {
     setAcceptedOffer(offerId);
     setTimeout(() => {
-      // Navigate to success or back to dashboard
       router.push('/farmer');
     }, 1500);
   };
@@ -34,7 +33,7 @@ export default function CompareOffersPage({ params }: { params: Promise<{ id: st
           <CheckCircle2 className="w-12 h-12 text-green-600" />
         </div>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Offer Accepted!</h1>
-        <p className="text-xl text-gray-600 mb-8">You have successfully locked in the price for your {listing.crop}. The buyer will be notified immediately.</p>
+        <p className="text-xl text-gray-800 mb-8">You have successfully locked in the price for your {listing.crop}. The buyer will be notified immediately.</p>
         <div className="animate-pulse flex items-center justify-center text-green-600 font-medium">
           Redirecting to your dashboard...
         </div>
@@ -52,9 +51,9 @@ export default function CompareOffersPage({ params }: { params: Promise<{ id: st
         <div className="p-6 bg-gray-50 border-b border-gray-200 flex justify-between items-center">
           <div>
             <h1 className="text-2xl font-bold text-gray-900 mb-1">Compare Offers for {listing.crop}</h1>
-            <p className="text-gray-600">Available: {listing.quantity} tonnes • Expected: ₹{listing.expectedPrice}/kg</p>
+            <p className="text-gray-800 font-medium">Available: {listing.quantity} tonnes • Expected: ₹{listing.expectedPrice}/kg</p>
           </div>
-          <div className="px-4 py-2 bg-green-100 text-green-800 font-bold rounded-lg">
+          <div className="px-4 py-2 bg-green-100 text-green-900 font-bold rounded-lg">
             {offers.length} Active Offers
           </div>
         </div>
@@ -64,8 +63,6 @@ export default function CompareOffersPage({ params }: { params: Promise<{ id: st
         {offers.map(offer => {
           const buyer = MOCK_BUYERS.find(b => b.id === offer.buyerId);
           const isRecommended = offer.id === bestOffer?.id;
-
-          // Calculate final farmer revenue considering transport
           const transportCostPerKg = offer.estimatedTransportCost;
           const netPrice = offer.offeredPrice - transportCostPerKg;
 
@@ -85,12 +82,12 @@ export default function CompareOffersPage({ params }: { params: Promise<{ id: st
                         {buyer?.name}
                         {buyer?.verified && <span title="Platform Verified Buyer"><ShieldCheck className="w-5 h-5 text-blue-500" /></span>}
                       </h3>
-                      <p className="text-gray-600 flex items-center gap-1 mt-1 text-sm">
+                      <p className="text-gray-800 font-medium flex items-center gap-1 mt-1 text-sm">
                         <MapPin className="w-4 h-4" /> {buyer?.location}
                       </p>
                     </div>
                     <div className="text-right bg-gray-50 px-4 py-2 rounded-xl border border-gray-200">
-                      <p className="text-sm text-gray-500 mb-1">Trust Score</p>
+                      <p className="text-sm text-gray-800 font-semibold mb-1">Trust Score</p>
                       <p className="font-bold text-gray-900 flex items-center gap-1 justify-end">
                         <span className="text-yellow-500">★</span> {buyer?.trustScore}/5.0
                       </p>
@@ -99,12 +96,12 @@ export default function CompareOffersPage({ params }: { params: Promise<{ id: st
 
                   <div className="grid grid-cols-2 gap-4 text-sm mb-4">
                     <div className="bg-gray-50 p-3 rounded-lg border border-gray-100">
-                      <p className="text-gray-500 mb-1">Quantity Requested</p>
-                      <p className="font-semibold text-gray-900">{offer.quantityRequested} tonnes</p>
+                      <p className="text-gray-800 font-semibold mb-1">Quantity Requested</p>
+                      <p className="font-bold text-gray-900">{offer.quantityRequested} tonnes</p>
                     </div>
                     <div className="bg-gray-50 p-3 rounded-lg border border-gray-100">
-                      <p className="text-gray-500 mb-1">Logistics</p>
-                      <p className="font-semibold text-gray-900 flex items-center gap-1">
+                      <p className="text-gray-800 font-semibold mb-1">Logistics</p>
+                      <p className="font-bold text-gray-900 flex items-center gap-1">
                         <Truck className="w-4 h-4" /> 
                         {offer.logisticsType === 'BUYER_PICKUP' ? 'Buyer Pickup' : offer.logisticsType === 'PLATFORM_ASSISTED' ? 'Platform Assisted' : 'Farmer Transport'}
                       </p>
@@ -112,8 +109,8 @@ export default function CompareOffersPage({ params }: { params: Promise<{ id: st
                   </div>
                   
                   <div className="bg-gray-50 p-3 rounded-lg border border-gray-100 text-sm">
-                    <p className="text-gray-500 mb-1">Payment Terms</p>
-                    <p className="font-semibold text-gray-900">{offer.paymentTerms}</p>
+                    <p className="text-gray-800 font-semibold mb-1">Payment Terms</p>
+                    <p className="font-bold text-gray-900">{offer.paymentTerms}</p>
                   </div>
                 </div>
 
@@ -122,12 +119,12 @@ export default function CompareOffersPage({ params }: { params: Promise<{ id: st
                   
                   <div className="space-y-3 text-sm flex-1">
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Offered Price:</span>
-                      <span className="font-medium text-gray-900">₹{offer.offeredPrice}/kg</span>
+                      <span className="text-gray-800 font-medium">Offered Price:</span>
+                      <span className="font-bold text-gray-900">₹{offer.offeredPrice}/kg</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Transport Ded.:</span>
-                      <span className="font-medium text-red-600">-₹{transportCostPerKg}/kg</span>
+                      <span className="text-gray-800 font-medium">Transport Ded.:</span>
+                      <span className="font-bold text-red-600">-₹{transportCostPerKg}/kg</span>
                     </div>
                     <div className="flex justify-between pt-2 border-t border-gray-200">
                       <span className="font-bold text-gray-900">Net to you:</span>
