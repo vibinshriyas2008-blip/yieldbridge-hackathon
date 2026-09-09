@@ -57,7 +57,7 @@ export default function AddProducePage() {
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Expected Price (₹ per kg)</label>
               <div className="relative">
-                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">₹</span>
+                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-800">₹</span>
                 <input required type="number" min="1" placeholder="e.g. 35" className="w-full pl-8 border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none" />
               </div>
             </div>
@@ -87,9 +87,9 @@ export default function AddProducePage() {
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">Upload Photos</label>
             <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:bg-gray-50 cursor-pointer transition-colors">
-              <UploadCloud className="w-12 h-12 text-gray-400 mx-auto mb-3" />
-              <p className="text-gray-600 font-medium">Click to upload photos of your crop</p>
-              <p className="text-gray-400 text-sm mt-1">PNG, JPG up to 10MB</p>
+              <UploadCloud className="w-12 h-12 text-gray-700 mx-auto mb-3" />
+              <p className="text-gray-800 font-medium">Click to upload photos of your crop</p>
+              <p className="text-gray-700 text-sm mt-1">PNG, JPG up to 10MB</p>
             </div>
           </div>
 

@@ -20,25 +20,25 @@ export default function AssistedAccessSimulation() {
         
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Assisted Access Prototype</h1>
-          <p className="text-xl text-gray-600">Bridging the digital divide for farmers with limited smartphone literacy.</p>
+          <p className="text-xl text-gray-800">Bridging the digital divide for farmers with limited smartphone literacy.</p>
         </div>
 
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
           <div className="flex border-b border-gray-200">
             <button 
-              className={`flex-1 py-4 text-center font-medium border-b-2 transition-colors ${activeTab === 'VOICE' ? 'border-orange-500 text-orange-600 bg-orange-50' : 'border-transparent text-gray-600 hover:bg-gray-50'}`}
+              className={`flex-1 py-4 text-center font-medium border-b-2 transition-colors ${activeTab === 'VOICE' ? 'border-orange-500 text-orange-600 bg-orange-50' : 'border-transparent text-gray-800 hover:bg-gray-50'}`}
               onClick={() => setActiveTab('VOICE')}
             >
               <Mic className="w-5 h-5 inline-block mr-2" /> Voice Interface
             </button>
             <button 
-              className={`flex-1 py-4 text-center font-medium border-b-2 transition-colors ${activeTab === 'IVR' ? 'border-orange-500 text-orange-600 bg-orange-50' : 'border-transparent text-gray-600 hover:bg-gray-50'}`}
+              className={`flex-1 py-4 text-center font-medium border-b-2 transition-colors ${activeTab === 'IVR' ? 'border-orange-500 text-orange-600 bg-orange-50' : 'border-transparent text-gray-800 hover:bg-gray-50'}`}
               onClick={() => setActiveTab('IVR')}
             >
               <Phone className="w-5 h-5 inline-block mr-2" /> IVR System
             </button>
             <button 
-              className={`flex-1 py-4 text-center font-medium border-b-2 transition-colors ${activeTab === 'CENTER' ? 'border-orange-500 text-orange-600 bg-orange-50' : 'border-transparent text-gray-600 hover:bg-gray-50'}`}
+              className={`flex-1 py-4 text-center font-medium border-b-2 transition-colors ${activeTab === 'CENTER' ? 'border-orange-500 text-orange-600 bg-orange-50' : 'border-transparent text-gray-800 hover:bg-gray-50'}`}
               onClick={() => setActiveTab('CENTER')}
             >
               <MonitorSmartphone className="w-5 h-5 inline-block mr-2" /> Service Center
@@ -52,12 +52,12 @@ export default function AssistedAccessSimulation() {
                   <Mic className="w-12 h-12 text-orange-600" />
                 </div>
                 <h2 className="text-2xl font-bold mb-2">AI Voice Assistant (Demo)</h2>
-                <p className="text-gray-600 mb-8 max-w-lg mx-auto">Farmers can list produce and review offers simply by speaking in their native language.</p>
+                <p className="text-gray-800 mb-8 max-w-lg mx-auto">Farmers can list produce and review offers simply by speaking in their native language.</p>
 
                 <div className="bg-gray-900 rounded-xl p-6 text-left max-w-lg mx-auto mb-6 h-64 flex flex-col justify-end relative overflow-hidden">
                   <div className="absolute top-4 left-4 flex items-center gap-2">
                     <span className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></span>
-                    <span className="text-xs text-gray-400 font-mono tracking-widest uppercase">Recording</span>
+                    <span className="text-xs text-gray-700 font-mono tracking-widest uppercase">Recording</span>
                   </div>
 
                   {voiceStep >= 0 && (
@@ -97,7 +97,7 @@ export default function AssistedAccessSimulation() {
                 </div>
 
                 <div className="flex justify-center gap-4">
-                  <button onClick={handleVoiceReset} className="px-6 py-2 border border-gray-300 rounded-lg text-gray-600 font-medium hover:bg-gray-50">Reset</button>
+                  <button onClick={handleVoiceReset} className="px-6 py-2 border border-gray-300 rounded-lg text-gray-800 font-medium hover:bg-gray-50">Reset</button>
                   <button onClick={handleVoiceNext} disabled={voiceStep >= 3} className="px-6 py-2 bg-orange-600 text-white rounded-lg font-medium hover:bg-orange-700 disabled:opacity-50">
                     Simulate Next Interaction
                   </button>
@@ -111,7 +111,7 @@ export default function AssistedAccessSimulation() {
                   <Phone className="w-12 h-12 text-gray-700" />
                 </div>
                 <h2 className="text-2xl font-bold mb-2">Basic Phone IVR</h2>
-                <p className="text-gray-600 mb-8 max-w-lg mx-auto">For completely offline farmers using basic feature phones. Dial a toll-free number to interact with the marketplace.</p>
+                <p className="text-gray-800 mb-8 max-w-lg mx-auto">For completely offline farmers using basic feature phones. Dial a toll-free number to interact with the marketplace.</p>
 
                 <div className="max-w-sm mx-auto bg-gray-100 border-4 border-gray-800 rounded-3xl p-6 shadow-xl relative overflow-hidden">
                   <div className="w-16 h-1 bg-gray-300 mx-auto rounded-full mb-6"></div>
@@ -145,7 +145,7 @@ export default function AssistedAccessSimulation() {
                   <MonitorSmartphone className="w-12 h-12 text-blue-600" />
                 </div>
                 <h2 className="text-2xl font-bold mb-2">Assisted Service Centers</h2>
-                <p className="text-gray-600 mb-8 max-w-lg mx-auto">Authorized local operators help farmers without devices to list their produce securely.</p>
+                <p className="text-gray-800 mb-8 max-w-lg mx-auto">Authorized local operators help farmers without devices to list their produce securely.</p>
 
                 <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 max-w-2xl mx-auto text-left">
                   <h3 className="font-bold text-blue-900 mb-4 border-b border-blue-200 pb-2">Center Operator Flow</h3>
@@ -154,28 +154,28 @@ export default function AssistedAccessSimulation() {
                       <CheckCircle className="w-6 h-6 text-blue-500 shrink-0" />
                       <div>
                         <p className="font-bold text-gray-900">Farmer Verification</p>
-                        <p className="text-sm text-gray-600">Farmer arrives at center and provides registered phone number. OTP verifies identity.</p>
+                        <p className="text-sm text-gray-800">Farmer arrives at center and provides registered phone number. OTP verifies identity.</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-blue-500 shrink-0" />
                       <div>
                         <p className="font-bold text-gray-900">Digital Capture</p>
-                        <p className="text-sm text-gray-600">Operator inputs crop details and takes photographs of the produce using center equipment.</p>
+                        <p className="text-sm text-gray-800">Operator inputs crop details and takes photographs of the produce using center equipment.</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-gray-300 shrink-0" />
                       <div>
                         <p className="font-bold text-gray-900">Offer Explanation</p>
-                        <p className="text-sm text-gray-600">Operator visually shows the farmer the competing offers, explaining logistics and price breakdowns clearly.</p>
+                        <p className="text-sm text-gray-800">Operator visually shows the farmer the competing offers, explaining logistics and price breakdowns clearly.</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-gray-300 shrink-0" />
                       <div>
                         <p className="font-bold text-gray-900">Printed Receipt</p>
-                        <p className="text-sm text-gray-600">Farmer selects offer and receives a printed physical receipt of the transaction and pickup details.</p>
+                        <p className="text-sm text-gray-800">Farmer selects offer and receives a printed physical receipt of the transaction and pickup details.</p>
                       </div>
                     </li>
                   </ul>

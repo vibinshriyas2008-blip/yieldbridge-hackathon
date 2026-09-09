@@ -10,7 +10,7 @@ export default function Home() {
             <Leaf className="w-12 h-12 text-green-600" />
             <h1 className="text-5xl font-bold text-gray-900">YieldBridge</h1>
           </div>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-800">
             Direct Farmer-to-Market Platform with Competitive Bidding & Price Transparency.
           </p>
         </div>

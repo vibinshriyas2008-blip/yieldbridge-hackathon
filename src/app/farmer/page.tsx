@@ -27,7 +27,7 @@ export default function FarmerDashboard() {
             <Package className="w-6 h-6" />
           </div>
           <div>
-            <p className="text-sm text-gray-500 font-medium">Active Listings</p>
+            <p className="text-sm text-gray-800 font-medium">Active Listings</p>
             <p className="text-2xl font-bold text-gray-900">{listings.length}</p>
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function FarmerDashboard() {
             <TrendingUp className="w-6 h-6" />
           </div>
           <div>
-            <p className="text-sm text-gray-500 font-medium">Pending Offers</p>
+            <p className="text-sm text-gray-800 font-medium">Pending Offers</p>
             <p className="text-2xl font-bold text-gray-900">
               {listings.reduce((acc, curr) => acc + getOffersForListing(curr.id).length, 0)}
             </p>
@@ -47,7 +47,7 @@ export default function FarmerDashboard() {
             <IndianRupee className="w-6 h-6" />
           </div>
           <div>
-            <p className="text-sm text-gray-500 font-medium">Total Earned (This Season)</p>
+            <p className="text-sm text-gray-800 font-medium">Total Earned (This Season)</p>
             <p className="text-2xl font-bold text-gray-900">₹1,45,000</p>
           </div>
         </div>
@@ -70,12 +70,12 @@ export default function FarmerDashboard() {
                       Grade {listing.qualityGrade}
                     </span>
                   </div>
-                  <p className="text-gray-600">
+                  <p className="text-gray-800">
                     {listing.quantity} tonnes • Expected: ₹{listing.expectedPrice}/kg
                   </p>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm text-gray-500 font-medium">Status</p>
+                  <p className="text-sm text-gray-800 font-medium">Status</p>
                   <p className="text-green-600 font-semibold flex items-center gap-1 justify-end">
                     <span className="w-2 h-2 rounded-full bg-green-600 inline-block animate-pulse"></span>
                     Receiving Quotes
@@ -105,18 +105,18 @@ export default function FarmerDashboard() {
                               {buyer?.name}
                               {buyer?.verified && <ShieldCheck className="w-4 h-4 text-blue-500" />}
                             </p>
-                            <p className="text-sm text-gray-500 flex items-center gap-1">
+                            <p className="text-sm text-gray-800 flex items-center gap-1">
                               <MapPin className="w-3 h-3" /> {buyer?.location.split(',')[0]}
                             </p>
                           </div>
                           <div className="text-right">
                             <p className={`text-2xl font-bold ${isRecommended ? 'text-green-600' : 'text-gray-900'}`}>
-                              ₹{offer.offeredPrice}<span className="text-sm text-gray-500 font-normal">/kg</span>
+                              ₹{offer.offeredPrice}<span className="text-sm text-gray-800 font-normal">/kg</span>
                             </p>
                           </div>
                         </div>
 
-                        <div className="space-y-2 text-sm text-gray-600 mb-6">
+                        <div className="space-y-2 text-sm text-gray-800 mb-6">
                           <p className="flex justify-between">
                             <span>Quantity Requested:</span>
                             <span className="font-medium text-gray-900">{offer.quantityRequested} tonnes</span>

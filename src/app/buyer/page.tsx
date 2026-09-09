@@ -10,11 +10,11 @@ export default function BuyerDashboard() {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Procurement Marketplace</h1>
-          <p className="text-gray-600 mt-1">Browse verified produce and submit quotations directly to farmers.</p>
+          <p className="text-gray-800 mt-1">Browse verified produce and submit quotations directly to farmers.</p>
         </div>
         <div className="flex gap-2 w-full md:w-auto">
           <div className="relative flex-1 md:w-64">
-            <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-700" />
             <input 
               type="text" 
               placeholder="Search crops, locations..." 
@@ -47,22 +47,22 @@ export default function BuyerDashboard() {
                 <div className="flex justify-between items-start mb-3">
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-1">{listing.crop}</h3>
-                    <p className="text-sm text-gray-600 font-medium">{listing.quantity} tonnes Available</p>
+                    <p className="text-sm text-gray-800 font-medium">{listing.quantity} tonnes Available</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-xs text-gray-500">Expected Price</p>
-                    <p className="text-lg font-bold text-gray-900">₹{listing.expectedPrice}<span className="text-sm font-normal text-gray-500">/kg</span></p>
+                    <p className="text-xs text-gray-800">Expected Price</p>
+                    <p className="text-lg font-bold text-gray-900">₹{listing.expectedPrice}<span className="text-sm font-normal text-gray-800">/kg</span></p>
                   </div>
                 </div>
 
                 <div className="space-y-2 mb-6">
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <User className="w-4 h-4 text-gray-400" />
+                  <div className="flex items-center gap-2 text-sm text-gray-800">
+                    <User className="w-4 h-4 text-gray-700" />
                     <span>{farmer?.name}</span>
                     {farmer?.verified && <span title="Platform Verified"><ShieldCheck className="w-4 h-4 text-blue-500" /></span>}
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <MapPin className="w-4 h-4 text-gray-400" />
+                  <div className="flex items-center gap-2 text-sm text-gray-800">
+                    <MapPin className="w-4 h-4 text-gray-700" />
                     <span>{listing.location}</span>
                   </div>
                 </div>
