@@ -26,19 +26,19 @@ export default function AssistedAccessSimulation() {
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
           <div className="flex border-b border-gray-200">
             <button 
-              className={`flex-1 py-4 text-center font-medium border-b-2 transition-colors ${activeTab === 'VOICE' ? 'border-orange-500 text-orange-600 bg-orange-50' : 'border-transparent text-gray-800 hover:bg-gray-50'}`}
+              className={`flex-1 py-4 text-center font-bold border-b-2 transition-colors ${activeTab === 'VOICE' ? 'border-orange-500 text-orange-600 bg-orange-50' : 'border-transparent text-gray-900 hover:bg-gray-50'}`}
               onClick={() => setActiveTab('VOICE')}
             >
               <Mic className="w-5 h-5 inline-block mr-2" /> Voice Interface
             </button>
             <button 
-              className={`flex-1 py-4 text-center font-medium border-b-2 transition-colors ${activeTab === 'IVR' ? 'border-orange-500 text-orange-600 bg-orange-50' : 'border-transparent text-gray-800 hover:bg-gray-50'}`}
+              className={`flex-1 py-4 text-center font-bold border-b-2 transition-colors ${activeTab === 'IVR' ? 'border-orange-500 text-orange-600 bg-orange-50' : 'border-transparent text-gray-900 hover:bg-gray-50'}`}
               onClick={() => setActiveTab('IVR')}
             >
               <Phone className="w-5 h-5 inline-block mr-2" /> IVR System
             </button>
             <button 
-              className={`flex-1 py-4 text-center font-medium border-b-2 transition-colors ${activeTab === 'CENTER' ? 'border-orange-500 text-orange-600 bg-orange-50' : 'border-transparent text-gray-800 hover:bg-gray-50'}`}
+              className={`flex-1 py-4 text-center font-bold border-b-2 transition-colors ${activeTab === 'CENTER' ? 'border-orange-500 text-orange-600 bg-orange-50' : 'border-transparent text-gray-900 hover:bg-gray-50'}`}
               onClick={() => setActiveTab('CENTER')}
             >
               <MonitorSmartphone className="w-5 h-5 inline-block mr-2" /> Service Center
@@ -51,13 +51,13 @@ export default function AssistedAccessSimulation() {
                 <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Mic className="w-12 h-12 text-orange-600" />
                 </div>
-                <h2 className="text-2xl font-bold mb-2">AI Voice Assistant (Demo)</h2>
-                <p className="text-gray-800 mb-8 max-w-lg mx-auto">Farmers can list produce and review offers simply by speaking in their native language.</p>
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">AI Voice Assistant (Demo)</h2>
+                <p className="text-gray-800 font-medium mb-8 max-w-lg mx-auto">Farmers can list produce and review offers simply by speaking in their native language.</p>
 
                 <div className="bg-gray-900 rounded-xl p-6 text-left max-w-lg mx-auto mb-6 h-64 flex flex-col justify-end relative overflow-hidden">
                   <div className="absolute top-4 left-4 flex items-center gap-2">
                     <span className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></span>
-                    <span className="text-xs text-gray-700 font-mono tracking-widest uppercase">Recording</span>
+                    <span className="text-xs text-gray-300 font-mono tracking-widest uppercase">Recording</span>
                   </div>
 
                   {voiceStep >= 0 && (

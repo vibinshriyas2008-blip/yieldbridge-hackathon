@@ -115,14 +115,14 @@ export default function SubmitQuotePage({ params }: { params: Promise<{ id: stri
             <div>
               <label className="block text-sm font-bold text-gray-900 mb-2">Your Offer Price (₹ per kg)</label>
               <div className="relative">
-                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-700 font-bold">₹</span>
-                <input required type="number" min="1" defaultValue={listing.expectedPrice} className="w-full pl-8 border border-gray-300 rounded-lg p-4 font-bold text-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" />
+                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-900 font-bold text-lg">₹</span>
+                <input required type="number" min="1" defaultValue={listing.expectedPrice} className="w-full pl-8 border-2 border-gray-400 rounded-lg p-4 font-bold text-lg text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" />
               </div>
             </div>
             
             <div>
               <label className="block text-sm font-bold text-gray-900 mb-2">Quantity Required (Tonnes)</label>
-              <input required type="number" min="0.1" max={listing.quantity} step="0.1" defaultValue={listing.quantity} className="w-full border border-gray-300 rounded-lg p-4 font-bold text-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" />
+              <input required type="number" min="0.1" max={listing.quantity} step="0.1" defaultValue={listing.quantity} className="w-full border-2 border-gray-400 rounded-lg p-4 font-bold text-lg text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" />
             </div>
           </div>
 
